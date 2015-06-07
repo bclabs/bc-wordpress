@@ -4,8 +4,8 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 
 var paths = {
-    styles: ['www/styles/**/*.scss'],
-    scripts: ['www/scripts/*.js']
+    styles: ['styles/**/*.scss'],
+    scripts: ['scripts/*.js']
 };
 
 
@@ -14,17 +14,17 @@ var paths = {
  */
 
 gulp.task('styles', function() {
-    return gulp.src('www/styles/styles.scss')
+    return gulp.src('styles/styles.scss')
         .pipe(sass({
             outputStyle: 'compressed',
             sourceComments: 'map'
         }))
-        .pipe(gulp.dest('www/assets'));
+        .pipe(gulp.dest('assets'));
 });
 gulp.task('scripts', function() {
-    return gulp.src(['www/scripts/*.js'])
+    return gulp.src(['scripts/*.js'])
         .pipe(uglify())
-        .pipe(gulp.dest('www/assets/scripts'));
+        .pipe(gulp.dest('assets/scripts'));
 });
 
 /**

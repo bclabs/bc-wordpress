@@ -1,2 +1,0 @@
-# bcwp
-BC Wordpress Theme
